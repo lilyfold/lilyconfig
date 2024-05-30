@@ -12,7 +12,7 @@
       },
       "Docker": {
         "Entrypoint": [
-              "python3", "/app/model.py",
+              "python3", "./model.py",
                     {{.Prompt}}
         ],
         "Image": "sibasismalla/bacalhau@sha256:e96297f28317e71e258e720bb8d8bb14c89ad27b8ca8f325c076b3d8d12c7c65"
@@ -27,7 +27,7 @@
       "Resources": {
         "GPU": ""
       },
-      "Timeout": 1800,
+      "Timeout": 10000,
       "Verifier": "Noop"
     }
   }
