@@ -10,19 +10,12 @@
       "Deal": {
         "Concurrency": 1
       },
-      "Docker": { },
-        "EngineSpec": {
-                "Params": {
-                "Entrypoint": null,
-                "EnvironmentVariables": [
-                ],
-                "Image": "sibasismalla/bacalhau:latest",
-                "Parameters": [
-                ],
-                "WorkingDirectory": ""
-                },
-                "Type": "docker"
-            },
+      "Docker": {
+        "CMD": [
+            "python3", "./model.py",{{.Prompt}}
+        ],
+        "Image": "sibasismalla/bacalhau:latest"
+      },
       "Engine": "Docker",
       "Network": {
         "Type": "None"
@@ -30,12 +23,6 @@
       "PublisherSpec": {
         "Type": "Estuary"
       },
-          "Outputs": [
-                {
-                "Name": "outputs",
-                "Path": "/outputs"
-                }
-            ],
       "Resources": {
         "GPU": ""
       },
