@@ -12,7 +12,7 @@
       },
       "Docker": {
         "CMD": [
-            "python3", "./model.py",{{.Prompt}}
+            "python ./model.py {{.Prompt}}"
         ],
         "Image": "sibasismalla/bacalhau:latest"
       },
