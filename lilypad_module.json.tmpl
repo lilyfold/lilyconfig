@@ -12,10 +12,9 @@
       },
       "Docker": {
         "Entrypoint": [
-            "python3", "model.py","{\"Address\":\"f01927170\",\"AdjustedPower\":33.67,\"WinCount\":6130,\"SectorTotal\":110328,\"SectorActive\
-":110328,\"SectorFaults\":0,\"SectorRecoveries\":0,\"LoanAmount\":\"1000\"}"
+            "python3", "model.py","{{.Prompt}}"
         ],
-        "Image": "sibasismalla/bacalhau:latest@sha256:c1a08bdce75ddbd304c9a8b9ab496cd0415b480e776a1fe4521b0360623d819d"
+        "Image": "sibasismalla/bacalhau:latest"
       },
       "Engine": "Docker",
       "Network": {
