@@ -17,7 +17,10 @@
             "Docker": {},
             "EngineSpec": {
                 "Params": {
-                "Entrypoint": null,
+                "Entrypoint":  [
+              "python", "./model.py",
+                    {{.Prompt}}
+        ],
                 "EnvironmentVariables": [
                 ],
                 "Image": "sibasismalla/bacalhau:latest@sha256:cde5918627ca9f1c55500df2388a91bb2ced40af61ce70c5fcf18cd123450ae9",
