@@ -12,9 +12,9 @@
       },
       "Docker": {
         "Entrypoint": [
-               "/bin/sh", "-c", "python3 app/hello.py"
+            "python3", "model.py","{{.Prompt}}"
         ],
-        "Image": "sibasismalla/test:latest@sha256:2c07954e83e17916faaa6878450a280b41213dd897e8d53e4174b959c44f7166"
+        "Image": "sibasismalla/bacalhau:latest@sha256:e96297f28317e71e258e720bb8d8bb14c89ad27b8ca8f325c076b3d8d12c7c65"
       },
       "Engine": "Docker",
       "Network": {
