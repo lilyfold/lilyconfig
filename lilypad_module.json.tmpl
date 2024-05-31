@@ -12,7 +12,42 @@
       },
       "Docker": {
         "Entrypoint": [
-              "python3 ./hello.py"
+                {
+    "machine": {
+        "gpu": 0,
+        "cpu": 1000,
+        "ram": 100
+    },
+    "job": {
+        "APIVersion": "V1beta1",
+        "Spec": {
+            "Deal": {
+                "Concurrency": 1
+            },
+            "Docker": {
+              "Entrypoint": [
+               "/bin/sh", "-c", "python3 app/hello.py"
+              ],
+               "EnvironmentVariables": [
+                   
+                ],
+              "Image": "yfantisa/animoids:latest@sha256:dd2efd780d2a83cc803ff27b23f34757f2db55c295ab182233bac7db0ba9be5f"
+            },
+            "Engine": "Docker",
+            "Network": {
+                "Type": "None"
+            },
+            "PublisherSpec": {
+                "Type": "IPFS"
+            },
+            "Resources": {
+              "GPU": ""
+            },
+            "Verifier": "Noop",
+            "Timeout": 1800
+        }
+    }
+}
         ],
         "Image": "sibasismalla/test:latest@sha256:2c07954e83e17916faaa6878450a280b41213dd897e8d53e4174b959c44f7166"
       },
